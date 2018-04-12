@@ -4,17 +4,32 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './/app-routing.module';
+import { LoginComponent } from './login/login.component';
+import { ClientesComponent } from './clientes/clientes.component';
+import { ServicoService } from './services/servico.service';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+import { HeaderComponent } from './header/header.component';
+import { ServicoComponent } from './servico/servico.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
+    ClientesComponent,
+    HeaderComponent,
+    ServicoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ServicoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
